@@ -66,6 +66,39 @@ logging.basicConfig()
 
 log = logging.getLogger(__name__)
 log.setLevel(logging.DEBUG)
+__version__ = 0.1
+
+
+def main(argv=None):
+    '''
+    Handles command line arguments and gets things started.
+    :param argv: List of arguments, as if specified on the command-line.
+                 If None, ``sys.argv[1:]`` is used instead.
+    :type argv: list of str
+    '''
+    # Get command line arguments
+    parser = argparse.ArgumentParser(
+        description="Takes one or more file paths and reports their detected \
+                     encodings",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+        conflict_handler='resolve')
+
+    parser.add_argument('-w', '--wait-interval', default=5)
+    parser.add_argument('-b', '--bar-value', default=3.14)
+
+    args = parser.parse_args(argv)
+
+
+
+
+
+
+
+
+
+
+
+
 
 #struct.unpack(fmt, string)
 #Unpack the string (presumably packed by pack(fmt, ...)) according to the
@@ -390,7 +423,7 @@ while s is not None:
             # get data from the packet
             data = packet[h_size:]
 
-            #print 'Data : ' + data
+            # print 'Data : ' + data
 
         # some other IP packet like IGMP
         else:
@@ -398,3 +431,6 @@ while s is not None:
 
         print('--------------------------------------')
         print
+
+if __name__ == '__main__':
+    main()
