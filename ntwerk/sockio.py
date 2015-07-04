@@ -309,8 +309,7 @@ Cover of TLPI
 #  Given the ifr_ifindex, return the name of the interface in
 #  ifr_name.  This is the only ioctl which returns its result in
 #  ifr_name.
-SIOCGIFNAME = 0x8910  
-
+SIOCGIFNAME = 0x8910
 
 
 SIOCSIFLINK = 0x8911          # set iface channel            */
@@ -327,27 +326,27 @@ SIOCGIFADDR = 0x8915        # get PA address               */
 SIOCSIFADDR = 0x8916        # set PA address               */
 
 
-SIOCGIFDSTADDR= 0x8917          # get remote PA address        */
-SIOCSIFDSTADDR= 0x8918          # set remote PA address        */
-SIOCGIFBRDADDR= 0x8919          # get broadcast PA address     */
-SIOCSIFBRDADDR= 0x891a          # set broadcast PA address     */
-SIOCGIFNETMASK= 0x891b          # get network PA mask          */
-SIOCSIFNETMASK= 0x891c          # set network PA mask          */
+SIOCGIFDSTADDR = 0x8917          # get remote PA address        */
+SIOCSIFDSTADDR = 0x8918          # set remote PA address        */
+SIOCGIFBRDADDR = 0x8919          # get broadcast PA address     */
+SIOCSIFBRDADDR = 0x891a          # set broadcast PA address     */
+SIOCGIFNETMASK = 0x891b          # get network PA mask          */
+SIOCSIFNETMASK = 0x891c          # set network PA mask          */
 SIOCGIFMETRIC = 0x891d          # get metric                   */
 SIOCSIFMETRIC = 0x891e          # set metric                   */
-SIOCGIFMEM    = 0x891f          # get memory address (BSD)     */
-SIOCSIFMEM    = 0x8920          # set memory address (BSD)     */
-SIOCGIFMTU    = 0x8921          # get MTU size                 */
-SIOCSIFMTU    = 0x8922          # set MTU size                 */
-SIOCSIFNAME   = 0x8923          # set interface name */
+SIOCGIFMEM = 0x891f          # get memory address (BSD)     */
+SIOCSIFMEM = 0x8920          # set memory address (BSD)     */
+SIOCGIFMTU = 0x8921          # get MTU size                 */
+SIOCSIFMTU = 0x8922          # set MTU size                 */
+SIOCSIFNAME = 0x8923          # set interface name */
 SIOCSIFHWADDR = 0x8924          # set hardware address         */
-SIOCGIFENCAP  = 0x8925          # get/set encapsulations       */
-SIOCSIFENCAP  = 0x8926          
+SIOCGIFENCAP = 0x8925          # get/set encapsulations       */
+SIOCSIFENCAP = 0x8926
 SIOCGIFHWADDR = 0x8927          # Get hardware address         */
-SIOCGIFSLAVE  = 0x8929          # Driver slaving support       */
-SIOCSIFSLAVE  = 0x8930
-SIOCADDMULTI  = 0x8931          # Multicast address lists      */
-SIOCDELMULTI  = 0x8932
+SIOCGIFSLAVE = 0x8929          # Driver slaving support       */
+SIOCSIFSLAVE = 0x8930
+SIOCADDMULTI = 0x8931          # Multicast address lists      */
+SIOCDELMULTI = 0x8932
 # SIOCGIFINDEX
 #     Retrieve the interface index of the interface into
 #     ifr_ifindex.
@@ -364,129 +363,120 @@ SIOCSIFBR = 0x8941          # Set bridging options         */
 
 SIOCGIFTXQLEN = 0x8942          # Get the tx queue length      */
 SIOCSIFTXQLEN = 0x8943          # Set the tx queue length      */
- 
- # SIOCGIFDIVERT was: = 0x8944          Frame diversion support */
+
+# SIOCGIFDIVERT was: = 0x8944          Frame diversion support */
 # SIOCSIFDIVERT was: = 0x8945          Set frame diversion options */
 
-SIOCETHTOOL   = 0x8946          # Ethtool interface            */
+SIOCETHTOOL = 0x8946          # Ethtool interface            */
 
-SIOCGMIIPHY   = 0x8947          # Get address of MII PHY in use. */
-SIOCGMIIREG   = 0x8948          # Read MII PHY register.       */
-SIOCSMIIREG   = 0x8949          # Write MII PHY register.      */
+SIOCGMIIPHY = 0x8947          # Get address of MII PHY in use. */
+SIOCGMIIREG = 0x8948          # Read MII PHY register.       */
+SIOCSMIIREG = 0x8949          # Write MII PHY register.      */
 
-SIOCWANDEV    = 0x894A          # get/set netdev parameters    */
+SIOCWANDEV = 0x894A          # get/set netdev parameters    */
 
 
 # ARP cache control calls. */
 # Note: 0x8950 - 0x8952  * obsolete calls, don't re-use */
-SIOCDARP      = 0x8953          # delete ARP table entry       */
-SIOCGARP      = 0x8954          # get ARP table entry          */
-SIOCSARP      = 0x8955          # set ARP table entry          */
+SIOCDARP = 0x8953          # delete ARP table entry       */
+SIOCGARP = 0x8954          # get ARP table entry          */
+SIOCSARP = 0x8955          # set ARP table entry          */
 
 # RARP cache control calls. */
-SIOCDRARP     = 0x8960          # delete RARP table entry      */
-SIOCGRARP     = 0x8961          # get RARP table entry         */
-SIOCSRARP     = 0x8962          # set RARP table entry         */
+SIOCDRARP = 0x8960          # delete RARP table entry      */
+SIOCGRARP = 0x8961          # get RARP table entry         */
+SIOCSRARP = 0x8962          # set RARP table entry         */
 
 # Driver configuration calls */
-SIOCGIFMAP    = 0x8970          # Get device parameters        */SIOCSIFMAP    = 0x8971          # Set device parameters        */
+# Get device parameters        */SIOCSIFMAP    = 0x8971          # Set
+# device parameters        */
+SIOCGIFMAP = 0x8970
 
 # DLCI configuration calls */
-SIOCADDDLCI   = 0x8980          # Create new DLCI device       */
-SIOCDELDLCI   = 0x8981          # Delete DLCI device           */
-SIOCGIFVLAN   = 0x8982          # 802.1Q VLAN support          */
-SIOCSIFVLAN   = 0x8983          # Set 802.1Q VLAN options      */
+SIOCADDDLCI = 0x8980          # Create new DLCI device       */
+SIOCDELDLCI = 0x8981          # Delete DLCI device           */
+SIOCGIFVLAN = 0x8982          # 802.1Q VLAN support          */
+SIOCSIFVLAN = 0x8983          # Set 802.1Q VLAN options      */
 
 # bonding calls */
-SIOCBONDENSLAVE 0x8990          # enslave a device to the bond */
-SIOCBONDRELEASE 0x8991          # release a slave from the bond*/
-SIOCBONDSETHWADDR    = 0x8992   # set the hw addr of the bond  */
-SIOCBONDSLAVEINFOQUERY 0x8993   # rtn info about slave state   */
-SIOCBONDINFOQUERY    = 0x8994   # rtn info about bond state    */
+SIOCBONDENSLAVE = 0x8990          # enslave a device to the bond */
+SIOCBONDRELEASE = 0x8991          # release a slave from the bond*/
+SIOCBONDSETHWADDR = 0x8992   # set the hw addr of the bond  */
+SIOCBONDSLAVEINFOQUERY = 0x8993   # rtn info about slave state   */
+SIOCBONDINFOQUERY = 0x8994   # rtn info about bond state    */
 SIOCBONDCHANGEACTIVE = 0x8995   # update to a new active slave */
 
 # bridge calls */
-SIOCBRADDBR   = 0x89a0          # create new bridge device     */
-SIOCBRDELBR   = 0x89a1          # remove bridge device         */
-SIOCBRADDIF   = 0x89a2          # add interface to bridge      */
-SIOCBRDELIF   = 0x89a3          # remove interface from bridge */
+SIOCBRADDBR = 0x89a0          # create new bridge device     */
+SIOCBRDELBR = 0x89a1          # remove bridge device         */
+SIOCBRADDIF = 0x89a2          # add interface to bridge      */
+SIOCBRDELIF = 0x89a3          # remove interface from bridge */
 
 # hardware time stamping: parameters in linux/net_tstamp.h */
 SIOCSHWTSTAMP = 0x89b0
 
 
-
-
-
-
-
-
-
-
-
 # IEEE 802.3 Ethernet magic constants.  The frame sizes omit the preamble
-# and FCS/CRC (frame check sequence). 
-ETH_ALEN = 6		/* Octets in one ethernet addr	 */
-ETH_HLEN=	14		/* Total octets in header.	 */
-ETH_ZLEN=	60		/* Min. octets in frame sans FCS */
-ETH_DATA_LEN=	1500		/* Max. octets in payload	 */
-ETH_FRAME_LEN=	1514		/* Max. octets in frame sans FCS */
+# and FCS/CRC (frame check sequence).
+ETH_ALEN = 6  # Octets in one ethernet addr * /
+ETH_HLEN = 14  # Total octets in header. */
+ETH_ZLEN = 60  # Min. octets in frame sans FCS * /
+ETH_DATA_LEN = 1500  # Max. octets in payload * /
+ETH_FRAME_LEN = 1514  # Max. octets in frame sans FCS * /
 
 
 # These are the defined Ethernet Protocol ID's.
-ETH_P_LOOP=	0x0060		/* Ethernet Loopback packet	*/
-ETH_P_PUP=	0x0200		/* Xerox PUP packet		*/
-ETH_P_PUPAT=	0x0201		/* Xerox PUP Addr Trans packet	*/
-ETH_P_IP=	0x0800		/* Internet Protocol packet	*/
-ETH_P_X25=	0x0805		/* CCITT X.25			*/
-ETH_P_ARP=	0x0806		/* Address Resolution packet	*/
-ETH_P_BPQ=	0x08FF		/* G8BPQ AX.25 Ethernet Packet	[ NOT AN OFFICIALLY REGISTERED ID ] */
-#define ETH_P_IEEEPUP	0x0a00		/* Xerox IEEE802.3 PUP packet */
-#define ETH_P_IEEEPUPAT	0x0a01		/* Xerox IEEE802.3 PUP Addr Trans packet */
-#define ETH_P_DEC       0x6000          /* DEC Assigned proto           */
-#define ETH_P_DNA_DL    0x6001          /* DEC DNA Dump/Load            */
-#define ETH_P_DNA_RC    0x6002          /* DEC DNA Remote Console       */
-#define ETH_P_DNA_RT    0x6003          /* DEC DNA Routing              */
-#define ETH_P_LAT       0x6004          /* DEC LAT                      */
-#define ETH_P_DIAG      0x6005          /* DEC Diagnostics              */
-#define ETH_P_CUST      0x6006          /* DEC Customer use             */
-#define ETH_P_SCA       0x6007          /* DEC Systems Comms Arch       */
-#define ETH_P_RARP      0x8035		/* Reverse Addr Res packet	*/
-#define ETH_P_ATALK	0x809B		/* Appletalk DDP		*/
-#define ETH_P_AARP	0x80F3		/* Appletalk AARP		*/
-#define ETH_P_8021Q	0x8100          /* 802.1Q VLAN Extended Header  */
-#define ETH_P_IPX	0x8137		/* IPX over DIX			*/
-#define ETH_P_IPV6	0x86DD		/* IPv6 over bluebook		*/
-#define ETH_P_WCCP	0x883E		/* Web-cache coordination protocol
+ETH_P_LOOP = 0x0060  # Ethernet Loopback packet * /
+ETH_P_PUP = 0x0200  # Xerox PUP packet * /
+ETH_P_PUPAT = 0x0201  # Xerox PUP Addr Trans packet * /
+ETH_P_IP = 0x0800  # Internet Protocol packet * /
+ETH_P_X25 = 0x0805  # CCITT X.25 * /
+ETH_P_ARP = 0x0806  # Address Resolution packet * /
+ETH_P_BPQ = 0x08FF  # G8BPQ AX.25 Ethernet Packet[NOT AN OFFICIALLY REGISTERED ID] * /
+# define ETH_P_IEEEPUP	0x0a00		/* Xerox IEEE802.3 PUP packet */
+# define ETH_P_IEEEPUPAT	0x0a01		/* Xerox IEEE802.3 PUP Addr Trans packet */
+# define ETH_P_DEC       0x6000          /* DEC Assigned proto           */
+# define ETH_P_DNA_DL    0x6001          /* DEC DNA Dump/Load            */
+# define ETH_P_DNA_RC    0x6002          /* DEC DNA Remote Console       */
+# define ETH_P_DNA_RT    0x6003          /* DEC DNA Routing              */
+# define ETH_P_LAT       0x6004          /* DEC LAT                      */
+# define ETH_P_DIAG      0x6005          /* DEC Diagnostics              */
+# define ETH_P_CUST      0x6006          /* DEC Customer use             */
+# define ETH_P_SCA       0x6007          /* DEC Systems Comms Arch       */
+# define ETH_P_RARP      0x8035		/* Reverse Addr Res packet	*/
+# define ETH_P_ATALK	0x809B		/* Appletalk DDP		*/
+# define ETH_P_AARP	0x80F3		/* Appletalk AARP		*/
+# define ETH_P_8021Q	0x8100          /* 802.1Q VLAN Extended Header  */
+# define ETH_P_IPX	0x8137		/* IPX over DIX			*/
+# define ETH_P_IPV6	0x86DD		/* IPv6 over bluebook		*/
+# define ETH_P_WCCP	0x883E		/* Web-cache coordination protocol
 # * defined in draft-wilson-wrec-wccp-v2-00.txt */
-#define ETH_P_PPP_DISC	0x8863		/* PPPoE discovery messages     */
-#define ETH_P_PPP_SES	0x8864		/* PPPoE session messages	*/
-#define ETH_P_MPLS_UC	0x8847		/* MPLS Unicast traffic		*/
-#define ETH_P_MPLS_MC	0x8848		/* MPLS Multicast traffic	*/
-#define ETH_P_ATMMPOA	0x884c		/* MultiProtocol Over ATM	*/
-#define ETH_P_ATMFATE	0x8884		/* Frame-based ATM Transport
-					 * over Ethernet
-					 */
-#define ETH_P_AOE	0x88A2		/* ATA over Ethernet		*/
+# define ETH_P_PPP_DISC	0x8863		/* PPPoE discovery messages     */
+# define ETH_P_PPP_SES	0x8864		/* PPPoE session messages	*/
+# define ETH_P_MPLS_UC	0x8847		/* MPLS Unicast traffic		*/
+# define ETH_P_MPLS_MC	0x8848		/* MPLS Multicast traffic	*/
+# define ETH_P_ATMMPOA	0x884c		/* MultiProtocol Over ATM	*/
+# define ETH_P_ATMFATE	0x8884		/* Frame-based ATM Transport
+
+# define ETH_P_AOE	0x88A2		/* ATA over Ethernet		*/
 
 # Non DIX types. Won't clash for 1500 types.
 #
- 
-ETH_P_802_3=	0x0001  # Dummy type for 802.3 frames  */
-ETH_P_AX25=	0x0002  #  Dummy protocol id for AX.25  */
-ETH_P_ALL=	0x0003  # Every packet (be careful!!!) */
-ETH_P_802_2=	0x0004  #  802.2 frames 		*/
-ETH_P_SNAP=	0x0005  # Internal only		*/
-ETH_P_DDCMP   =  0x0006   # DEC DDCMP: Internal only     */
-ETH_P_WAN_PPP=   0x0007     #  Dummy type for WAN PPP frames*/
-ETH_P_PPP_MP  =  0x0008    # Dummy type for PPP MP frames */
-ETH_P_LOCALTALK =0x0009  # Localtalk pseudo type 	*/
-ETH_P_PPPTALK=	0x0010	  #  Dummy type for Atalk over PPP*/
-ETH_P_TR_802_2=	0x0011	  # 802.2 frames 		*/
-ETH_P_MOBITEX=	0x0015	  #  Mobitex (kaz@cafe.net)	*/
-ETH_P_CONTROL=	0x0016	  # Card specific control frames */
-ETH_P_IRDA=	0x0017	  # Linux-IrDA			*/
-ETH_P_ECONET=	0x0018	  #  Acorn Econet			*/
-ETH_P_HDLC=	0x0019	  # HDLC frames			*/
-ETH_P_ARCNET=	0x001A	  #  1A for ArcNet :-)            */
- 
+
+ETH_P_802_3 = 0x0001  # Dummy type for 802.3 frames  */
+ETH_P_AX25 = 0x0002  # Dummy protocol id for AX.25  */
+ETH_P_ALL = 0x0003  # Every packet (be careful!!!) */
+ETH_P_802_2 = 0x0004  # 802.2 frames   */
+ETH_P_SNAP = 0x0005  # Internal only  */
+ETH_P_DDCMP = 0x0006   # DEC DDCMP: Internal only     */
+ETH_P_WAN_PPP = 0x0007  # Dummy type for WAN PPP frames*/
+ETH_P_PPP_MP = 0x0008    # Dummy type for PPP MP frames */
+ETH_P_LOCALTALK = 0x0009  # Localtalk pseudo type 	*/
+ETH_P_PPPTALK = 0x0010  # Dummy type for Atalk over PPP*/
+ETH_P_TR_802_2 = 0x0011   # 802.2 frames   */
+ETH_P_MOBITEX = 0x0015  # Mobitex (kaz@cafe.net) */
+ETH_P_CONTROL = 0x0016   # Card specific control frames */
+ETH_P_IRDA = 0x0017   # Linux-IrDA   */
+ETH_P_ECONET = 0x0018  # Acorn Econet   */
+ETH_P_HDLC = 0x0019   # HDLC frames   */
+ETH_P_ARCNET = 0x001A  # 1A for ArcNet :-)            */
