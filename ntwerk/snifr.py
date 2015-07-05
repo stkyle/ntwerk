@@ -186,7 +186,7 @@ def eth_addr(a):
 
 
 def get_virgin_socket():
-    ETH_P_ALL = 0x0003  # Every packet (be careful!!!) */
+    ETH_P_ALL = 0x0003  
     try:
         # Convert 16-bit positive integers from network to host byte order.
         # Ethernet Protocol ID corresponding to ALL packets
@@ -249,10 +249,14 @@ while s is not None:
     # sending the data. See the Unix manual page recv(2) for the meaning of
     # the optional argument flags; it defaults to zero. (The format of
     # address depends on the address family.
-    buffer_size = 65565
-    packet = s.recvfrom(buffer_size)
 
-    dest_mac, src_mac, eth_protocol = parse_packet_header(packet)
+    # Each Ethernet frame starts with an Ethernet header, which contains 
+    # destination and source MAC addresses as its first two fields.
+
+    buffer_size = 65565
+    sock_data, sock_addr = s.recvfrom(buffer_size)
+
+    dest_mac, src_mac, eth_protocol = parse_packet_header(sock_data)
     # packet string from tuple
     packet, packet_addr = packet
 
