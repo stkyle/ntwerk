@@ -41,7 +41,7 @@ DESCRIPTION         top
                    int             ifr_metric;
                    int             ifr_mtu;
                    struct ifmap    ifr_map;
-                   char            ifr_slave[IFNAMSIZ];
+                   char            ifr_subordinate[IFNAMSIZ];
                    char            ifr_newname[IFNAMSIZ];
                    char           *ifr_data;
                };
@@ -82,8 +82,8 @@ DESCRIPTION         top
               IFF_PROMISC       Interface is in promiscuous mode.
               IFF_NOTRAILERS    Avoid use of trailers.
               IFF_ALLMULTI      Receive all multicast packets.
-              IFF_MASTER        Master of a load balancing bundle.
-              IFF_SLAVE         Slave of a load balancing bundle.
+              IFF_MASTER        Main of a load balancing bundle.
+              IFF_SLAVE         Subordinate of a load balancing bundle.
               IFF_MULTICAST     Supports multicast
               IFF_PORTSEL       Is able to select media type via ifmap.
               IFF_AUTOMEDIA     Auto media selection active.
@@ -103,10 +103,10 @@ DESCRIPTION         top
                                       Private flags
               IFF_802_1Q_VLAN      Interface is 802.1Q VLAN device.
               IFF_EBRIDGE          Interface is Ethernet bridging device.
-              IFF_SLAVE_INACTIVE   Interface is inactive bonding slave.
-              IFF_MASTER_8023AD    Interface is 802.3ad bonding master.
-              IFF_MASTER_ALB       Interface is balanced-alb bonding master.
-              IFF_BONDING          Interface is a bonding master or slave.
+              IFF_SLAVE_INACTIVE   Interface is inactive bonding subordinate.
+              IFF_MASTER_8023AD    Interface is 802.3ad bonding main.
+              IFF_MASTER_ALB       Interface is balanced-alb bonding main.
+              IFF_BONDING          Interface is a bonding main or subordinate.
               IFF_SLAVE_NEEDARP    Interface needs ARPs for validation.
               IFF_ISATAP           Interface is RFC4214 ISATAP interface.
 
@@ -247,7 +247,7 @@ BUGS         top
        following to your program as a workaround:
 
            #ifndef ifr_newname
-           #define ifr_newname     ifr_ifru.ifru_slave
+           #define ifr_newname     ifr_ifru.ifru_subordinate
            #endif
 SEE ALSO         top
 
@@ -399,12 +399,12 @@ SIOCGIFVLAN = 0x8982          # 802.1Q VLAN support          */
 SIOCSIFVLAN = 0x8983          # Set 802.1Q VLAN options      */
 
 # bonding calls */
-SIOCBONDENSLAVE = 0x8990          # enslave a device to the bond */
-SIOCBONDRELEASE = 0x8991          # release a slave from the bond*/
+SIOCBONDENSLAVE = 0x8990          # ensubordinate a device to the bond */
+SIOCBONDRELEASE = 0x8991          # release a subordinate from the bond*/
 SIOCBONDSETHWADDR = 0x8992   # set the hw addr of the bond  */
-SIOCBONDSLAVEINFOQUERY = 0x8993   # rtn info about slave state   */
+SIOCBONDSLAVEINFOQUERY = 0x8993   # rtn info about subordinate state   */
 SIOCBONDINFOQUERY = 0x8994   # rtn info about bond state    */
-SIOCBONDCHANGEACTIVE = 0x8995   # update to a new active slave */
+SIOCBONDCHANGEACTIVE = 0x8995   # update to a new active subordinate */
 
 # bridge calls */
 SIOCBRADDBR = 0x89a0          # create new bridge device     */
